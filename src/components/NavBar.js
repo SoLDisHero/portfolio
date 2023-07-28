@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { styled } from 'styled-components'
-import Tick from './Tick'
 
-const NavbarStyle = styled.div`
-    .navbar{
-        
-    }
+const NavbarStyle = styled.div`    
     position: fixed;
     z-index:100;
     width: 100%;
     left: 0;
     top: 0;
-    transition: top 0.3s;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
     background-color: var(--bg-base);
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
     ul {
         max-width: 1200px;
         text-align: center;
@@ -26,22 +20,33 @@ const NavbarStyle = styled.div`
             transition: .2s ease-in-out background-color;
             
         }
-        li:hover{
-            background-color: var(--bg-secondary);  
-            background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-        }
         a{
             display: inline-block;
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1.2rem;
             margin: 0 1rem;
             color: var(--color);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-family:'Schibsted Grotesk', sans-serif; 
             outline:none;
+            position:relative;
+        }        
+        a::before{
+            content: "";
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            height: 2px;
+            background-color:var(--bg-third);
+            transform: scaleX(0) rotate(5deg);
+            transform-origin:center;
+            transition:transform .33s;
         }
-        .active{
-        color: #DDE6ED;
+        a:hover::before{
+            transform:scaleX(1)
         }
+
+        
         ${'' /* .selected{
             animation: move 0.3s ease;
         }
@@ -92,48 +97,37 @@ const NavbarStyle = styled.div`
 `
 
 export default function Navbar() {
-    const [selectedItem, setSelectedItem] = useState("");
+    
     //hide navbar
-    const [prevScroll, setPrevScroll] = useState(window.scrollY);
+    const [prevScroll, setPrevScroll] = useState(0);
     const [visible, setVisible] = useState(true);
 
     function handleScroll() {
-        const currentScroll = window.scrollY;
-        // setVisible(prevScroll < currentScroll || currentScroll === 0);
-        // setPrevScroll(currentScroll);
-        setVisible(prevScroll > currentScroll);
+        const currentScroll = window.scrollY;        
+        setVisible(prevScroll > currentScroll && currentScroll === 0);
         setPrevScroll(currentScroll);
     }
 
     useEffect(() => {
+        
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         }
-    })
+    },)
 
-    function handleClick(item) {
-        setSelectedItem(item)
-    }
 
   return (
     <NavbarStyle className={visible ? "navbar" : "navbar hiddenNav"}>
     <ul >
         <li>
-            <NavLink to="/" onClick={() => handleClick("home")}>
-            {selectedItem === "home" ? <Tick/> : ""}Home</NavLink>
+            <NavLink to="/">Home</NavLink>
         </li>
         <li>
-            <NavLink to="/about" onClick={() => handleClick("about")}>
-            {selectedItem === "about" ? <Tick/> : ""}About</NavLink>
+            <NavLink to="/about">About</NavLink>
         </li>
         <li>
-            <NavLink to="/projects" onClick={() => handleClick("projects")}>
-            {selectedItem === "projects" ? <Tick/> : ""}Projects</NavLink>
-        </li>
-        <li>
-            <NavLink to="/contact" onClick={() => handleClick("contact")}>
-            {selectedItem === "contact" ? <Tick/> : ""}Contact</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
         </li>        
     </ul>
     </NavbarStyle>

@@ -7,12 +7,12 @@ import {HiOutlineCode} from 'react-icons/hi'
 import {FaConnectdevelop} from 'react-icons/fa'
 
 const ServiceSectionStyle = styled.div`
-    padding: 10rem 0;
+    padding: 7rem 0;
     .all-service-items{
         display: flex;
         gap: 3rem;
         justify-content: space-between;
-        margin-top:5rem;
+        margin-top:3rem;
     }
     @media only screen and (max-width: 768px) {
         .all-service-items{
@@ -28,22 +28,23 @@ export default function ServiceSection() {
   return (
       <ServiceSectionStyle>
     <div className='container'>
-        <Heading title='services' subTitle="I am offering my"/>
+        <Heading title='with' subTitle="I could be helpfull"/>
         <div className='all-service-items'>
-            <ServiceItem
+            <ServiceItem classname="first"
             icon={<AiOutlineAntDesign/>}
             descTitle='Web Design'
             descText='I do a unique design that you will love.'
             />
-            <ServiceItem 
+            <ServiceItem classname="second"
             icon={<HiOutlineCode/>}
             descTitle='Building Websites'
             descText='I develop the websites from scratch.'
             />
-            <ServiceItem
+            <ServiceItem classname="third"
             icon={<FaConnectdevelop/>}
-            descTitle='Full-stack development'
-            descText='I provide full-stack development with databases.'
+            descTitle='Dedication'
+            // descText='I provide full-stack development with databases.'
+            descText='I am a team player who can work in collaboration to finish a project on time.'
             />
         </div>
     </div>

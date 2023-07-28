@@ -1,61 +1,85 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import ProjectImg from "../images/calc.png"
 import { styled } from 'styled-components'
+import Button from './Button'
 
-const ProjectItemStyle = styled.div`
+const ProjectItemStyle = styled.div`        
+    .card{
+        box-shadow: 0px 0px 25px -5px;
+        transition: 0.3s;
+        animation: ease-in-out;
+        border-radius:6px;
+        background-color: var(--bg-secondary);
+        height: 580px;
+    }
+    .card:hover{
+        transform:scale(1.1);
+        box-shadow: 0px 0px 10px 0px;
+        border-radius:6px;
+    }
     .project-img{
         width: 100%;
-        height: 400px;
+        height:350px;
         overflow: hidden;
-        border-radius: 12px;
+        border-radius: 8px;
         display: inline-block;
-        border: 2px solid var(--color);
-        img{
-            height: 100%;
-        }
+        border: 3px solid var(--color);
     }
     .project-info{
-        margin-top: 1rem;
         background-color: var(--bg-secondary);
         padding: 1rem;
-        border-radius: 12px;
+        border-radius: 6px;
     }
     .project-title{
-        font-size: 2.2rem;
-        color: white;
+        font-size: 2rem;
+        color: var(--color);
     }
     .project-desc{
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-family:'Schibsted Grotesk', sans-serif;
         margin-top: 1rem;
+        color: var(--color);
     }
-    @media only screen and(max-width: 768px) {
+    a{
+        width:60%;
+    }
+    @media only screen and (max-width: 768px) {
+        .card{
+        height: 500px;
+        }
         .project-img{
-            height: 350px;
+            height: 300px;
+        }
+        .project-title{
+            font-size: 1.6rem;
+        }
+        .project-desc{
+        font-size: 1rem;
         }
     }
 `
 export default function ProjectItem({
     img = ProjectImg,
     title = "Project Name",
-    desc = "Some description"
+    desc = "Some description",
 }) {
   return (
     <ProjectItemStyle>
-        <Link to="/projects" className="project-img">
+    <div className='card'>
+        <div className="project-img">
             <img src={img} alt='image of project'/>
-        </Link>
+        </div>
         <div className='project-info'>
-            <Link to="#">
                 <h3 className='project-title'>
                     {title}
                 </h3>
-            </Link>
             <p className='project-desc'>
                 {desc}
             </p>
-        </div>
+            <Button></Button>         
+        </div>  
+              
+    </div>
     </ProjectItemStyle>
   )
 }

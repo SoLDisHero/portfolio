@@ -4,16 +4,19 @@ import Button from './Button';
 import { styled } from 'styled-components';
 
 const ContactStyle = styled.div`
-    padding: 10rem 0;
+    padding: 6rem 0;
     .contact-main{
         background-color: var(--bg-secondary);
-        border-radius: 12px;
+        border-radius: 8px;
         padding: 3rem 0rem;
         text-align: center;        
     }
     .contact-heading{
         font-size: 3rem;
         margin-bottom: 2rem;
+    }
+    a{
+        width:11rem;
     }
     @media only screen and (max-width: 768px) {
         .contact-heading{
@@ -27,11 +30,11 @@ export default function ContactSection() {
     <ContactStyle>
         <div className='container'>
             <div className='contact-main'>
-                <Text>This is text</Text>
+                <Text>don't be shy</Text>
                 <h3 className='contact-heading'>
-                    Let me help you
+                    hit me up!
                 </h3>
-                <Button btnText='Contact now' btnLink='/contact'></Button>
+                <Button btnText='Mail me' btnLink='/contact'></Button>
             </div>
         </div>
     </ContactStyle>

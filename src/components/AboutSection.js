@@ -4,10 +4,9 @@ import Text from "./Text"
 import Button from "./Button"
 import ImgAbout from "../images/layout_bw.jpg"
 import { styled } from 'styled-components'
-import ScrollToTop from './ScrollToTop'
 
 const AboutSectionStyle = styled.div`
-    padding: 10rem 0;
+    padding: 1rem 0;
     .container{
         display:flex;
         align-items: center;
@@ -16,7 +15,10 @@ const AboutSectionStyle = styled.div`
     }
     .left, .right{
         flex:1;
-    }
+    }    
+    .right img{
+            border: 3px solid var(--color);
+        }
     .headingPara{
         text-align:left;
     }
@@ -24,7 +26,6 @@ const AboutSectionStyle = styled.div`
         display:flex;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 2rem;
     }
     .textC{
         margin-left: 0;
@@ -32,13 +33,14 @@ const AboutSectionStyle = styled.div`
     }
     @media only screen and (max-width: 950px) {
         .left{
-            flex:4;
+            flex: 4;
         }
         .right{
             flex: 3;
         }
     }
     @media only screen and (max-width: 768px){
+        padding:3rem 0;
         .container{
             flex-direction: column;
             text-align: center;
@@ -58,9 +60,9 @@ const AboutSectionStyle = styled.div`
         }
         .button_section{
             flex-direction: column;
-            .button-wrapper, a{
-            width:100%;
-        }
+                .button-wrapper, a{
+                width:100%;
+            }
         }
         
     }
@@ -72,9 +74,9 @@ export default function AboutSection() {
     <div className='container'>
         <div className="left">
             <Heading title='about me' subTitle='This story is'/>
-            <Text>I'm eager to learn and get new technologies. I'm from MN, USA. I'm ready for relocation and your prepositions.</Text>
+            <Text>I'm a lifelong learner from MN, USA. I am extroverted introvert with passion for ...</Text>
             <div className="button_section">
-                <Button btnText='More about' booleanindex={false } onClick={<ScrollToTop/>}></Button>
+                <Button btnText='More about me' booleanindex={false} btnLink='/about'></Button>
             </div>
         </div>
         <div className="right">

@@ -4,26 +4,25 @@ const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 :root{
-    --bg-base: #331D2C;
-    --bg-secondary: #3F2E3E;
-    --bg-third: #A78295;
-    --color: #EFE1D1
+    --bg-base: #f4f4f1;
+    --bg-secondary: #C4DFDF;
+    --bg-third: #146C94;
+    --color: #5f6368;
 }
 html{
     font-family: 'Roboto Condensed', sans-serif;    
     color: var(--color);
     background-color: var(--bg-base);
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
 .navbar{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  transition: transform 0.4s;
+  transition: transform 0.25s;
 }
 .hiddenNav{
   transform: translateY(-158px);
@@ -31,7 +30,7 @@ html{
 }
 @media only screen and (max-width: 768px){
     .hiddenNav{
-      transform: translateY(-446px);
+      transform: translateY(-346px);
       box-shadow: none;
     }
 }

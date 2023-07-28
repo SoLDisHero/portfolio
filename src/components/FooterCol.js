@@ -1,14 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
+import {FaFacebook} from "react-icons/fa"
 
 const FooterColStyle = styled.div`
-    .heading {
-        font-size: 2.3rem;
-        margin-bottom: 2rem;
-    }
     li{
-        margin-bottom: 1rem;        
+        margin-top: 1rem;        
     }
     a{
         font-size: 1.7rem;
@@ -17,29 +14,32 @@ const FooterColStyle = styled.div`
 `
 
 export default function FooterCol({
+    
     heading = "This is heading",
     Links = [
         {
+            icon: FaFacebook,
             type: "link",
             title : "Home",
             path : "/home"
         },
         {
-            type : "link",
-            title : "About",
-            path : "/about"
-        },
+            icon: FaFacebook,
+            type: "link",
+            title : "Home",
+            path : "/home"
+        }
     ]
 }) {
   return (
     <FooterColStyle>
         <h2 className='heading'>{heading}</h2>
-        <ul>
+        <ul className='icon'>
             
             {Links.map((item, index) => (
-                <li key={index}>
+                <li key={index} > 
                     {item.type === "link" ? 
-                    (<Link to={item.path}>{item.title}</Link>) : 
+                    (<Link to={item.path} target='_blank'>{item.icon}</Link>) : 
                     <a href={item.path} target='_blank' rel='noreferrer'>{item.title}</a>}
                 </li>
             ))}
