@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div>
       <ContactPage/>
-      <Map/>
+      {/* <Map/> */}
     </div>
   )
 }

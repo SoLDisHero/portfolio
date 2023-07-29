@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar.js"
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+
 function App() {
  
   return (

@@ -10,17 +10,23 @@ const ItemStyle = styled.div`
     align-items: center;
     gap: 1.5rem;
     border-radius: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     .icon{
         color:white;
         background-color: var(--bg-third);
-        padding:1rem;
+        padding:0.8rem;
         align-items: center;
         justify-content:center;
         border-radius:50%;
     }
     svg{
         width: 1.5rem;
+    }
+    @media only screen and (max-width: 768px) {
+        padding:0.8rem;
+        svg{
+        width: 1rem;
+        }
     }
 `
 

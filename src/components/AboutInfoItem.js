@@ -6,33 +6,35 @@ const AboutInfoItemStyle = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-start;
-    margin-top: 3rem;
+    margin-top: 2rem;
     position:relative;
     .title{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .items{
         display:flex;
         gap: 1.5rem;
         position:absolute;
-        left: 18rem;
+        left: 12rem;
     }
 
     .item{
         background-color: var(--bg-secondary);
-        padding: 1rem;
-        border-radius: 8px;
+        padding: 0.65rem;
+        border-radius: 10px;
     }
     @media only screen and (max-width: 768px) {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start;        
         gap: 1rem;
         .items{
             position:initial;
-            gap: 1rem;
+            gap: 0.5rem;
+            display:flex;
+            flex-wrap:wrap;
         }
         .title{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
 `

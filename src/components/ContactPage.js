@@ -6,7 +6,7 @@ import { MdEmail, MdOutlineLocationOn, MdPhone } from 'react-icons/md'
 import ContactForm from './ContactForm'
 
 const ContactStyle = styled.div`
-    padding: 6rem 0 ;
+    padding: 11rem 0 ;
     .contact{
         display:flex;
         gap: 5rem;
@@ -31,7 +31,6 @@ const ContactStyle = styled.div`
     .right{
         max-width: 500px;
         width: 100%;
-        border-radius: 12px;
     }
     @media only screen and (max-width: 768px) {
         .contact{
@@ -43,8 +42,8 @@ const ContactStyle = styled.div`
         .left, .right{
             max-width:100%;
         }
-        .right{
-            padding: 3rem 1rem 1rem 1rem;
+        .headingPara{
+            display:none;
         }
     }
 `
@@ -62,8 +61,7 @@ export default function ContactPage() {
                 </div>
                 <div className='right'>
                     <ContactForm/>
-                </div>
-                
+                </div>                
             </div>
         </div>
     </ContactStyle>
