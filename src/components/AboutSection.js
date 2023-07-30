@@ -76,7 +76,7 @@ export default function AboutSection() {
             <Heading title='about me' subTitle='This story is'/>
             <Text>I'm a lifelong learner from MN, USA. I am extroverted introvert with passion for ...</Text>
             <div className="button_section">
-                <Button btnText='More about me' booleanindex={false} btnLink='/about'></Button>
+                <Button btnText='More about me' btnLink='/about'></Button>
             </div>
         </div>
         <div className="right">
