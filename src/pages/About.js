@@ -134,7 +134,7 @@ export default function About() {
             </AboutInfoItem>
             <AboutInfoItem 
             title='Courses' 
-            items={["The Web Development Bootcamp 2023 by Angela Yu", "The Wev Developer Bootcamp 2023 by Colt Steele"]}>              
+            items={["The Web Development Bootcamp by Angela Yu", "The Web Developer Bootcamp by Colt Steele"]}>              
             </AboutInfoItem>
           </div>
           <div className='bottom-item'>

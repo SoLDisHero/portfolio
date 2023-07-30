@@ -2,7 +2,7 @@ import React from 'react'
 import Text from "../components/Text";
 import FooterCol from './FooterCol';
 import { styled } from 'styled-components';
-import {FaFacebook, FaInstagramSquare} from "react-icons/fa"
+import {FaFacebook} from "react-icons/fa"
 import {BsGithub} from "react-icons/bs"
 import {HiOutlineMailOpen} from "react-icons/hi"
 
@@ -11,7 +11,7 @@ const FooterStyle = styled.div`
     color:var(--bg-base);
     .copyright{
         text-align: center;
-        padding-bottom:1.6rem;
+        padding-bottom:2rem;
     }
     .col{
         display:flex;

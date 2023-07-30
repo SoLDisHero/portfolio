@@ -52,7 +52,7 @@ export default function ContactPage() {
   return (
     <ContactStyle>
         <div className='container'>
-            <Heading title='Contact' subTitle='get in touch'/>
+            <Heading title='with me' subTitle='get in touch'/>
             <div className='contact'>
                 <div className='left'>
                     <ContactInfoItem icon={<MdPhone/>} text='+1 763 843 40 97'/>
