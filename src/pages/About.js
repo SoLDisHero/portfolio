@@ -116,7 +116,7 @@ export default function About() {
             <a href='EY resume.pdf' download="Eugene_Yerashenka_CV.pdf">Download CV</a>
           </div>
           <div className='right'>
-            <img src={AboutImg} alt='my-image'></img>
+            <img src={AboutImg} alt='my-pic'></img>
           </div>
         </div>
         <div className='bottom'>

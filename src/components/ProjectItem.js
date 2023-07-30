@@ -67,7 +67,7 @@ export default function ProjectItem({
     <ProjectItemStyle>
     <div className='card'>
         <div className="project-img">
-            <img src={img} alt='image of project'/>
+            <img src={img} alt='imageofproject'/>
         </div>
         <div className='project-info'>
                 <h3 className='project-title'>
