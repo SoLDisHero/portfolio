@@ -11,7 +11,7 @@ const FooterStyle = styled.div`
     color:var(--bg-base);
     .copyright{
         text-align: center;
-        padding-bottom:2rem;
+        padding-bottom:2.3rem;
     }
     .col{
         display:flex;

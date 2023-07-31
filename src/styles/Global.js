@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 html{
     font-family: 'Roboto Condensed', sans-serif;    
     color: var(--color);
-    background-color: var(--bg-base);
+    background-color: var(--bg-base);    
 }
 .navbar{
   position: fixed;
@@ -57,12 +57,4 @@ html{
 // font-family: 'Schibsted Grotesk', sans-serif;
 // font-family: 'Silkscreen', cursive;
 
-//colors #ffffff #f4f4f1   
-//#f8f9fa #f1f3f4
-//text colors #cacac7 #2b393c #a2a29e 
-//#5f6368
-// font family "Google Sans",Roboto,Arial,Helvetica,sans-serif; proxima
-//letter-spacing: normal;
-//line-height: 28px;
-//font-size: 20px;
 export default GlobalStyle;

@@ -42,9 +42,9 @@ export default function ServiceSection() {
             />
             <ServiceItem classname="third"
             icon={<FaConnectdevelop/>}
-            descTitle='Dedication'
+            descTitle='Full-stack'
             // descText='I provide full-stack development with databases.'
-            descText='I am a team player who can work in collaboration to finish a project on time.'
+            descText='I also build projects behind the scenes.'
             />
         </div>
     </div>
