@@ -7,13 +7,13 @@ const projectsData = [
     {
         id: uuidv4(),
         name: "Diabetic calculator",
-        desc: "This calculator helps me to transfer glucose mg/dl to mmol/L units.",
+        desc: "This calculator combines the capabilities of a standard calculator and a diabetic calculator, providing users with a unified tool for both general calculations and glucose unit conversions.",
         img: CalcImg //I will replace with a screenshot of the site
     },
     {
         id: uuidv4(),
         name: "National Parks of USA",
-        desc: "It's a base of National Parks of USA. It contains general information and my journey throught USA.",
+        desc: "It's a base of National Parks of USA. It contains general information and my journey through USA.",
         img: DunesNpImg //I will replace with a screenshot of the site
     },
     {

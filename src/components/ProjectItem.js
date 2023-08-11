@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectImg from "../images/calc.png"
 import { styled } from 'styled-components'
-import Button from './Button'
+// import Button from './Button'
 
 const ProjectItemStyle = styled.div`        
     .card{
@@ -42,6 +42,13 @@ const ProjectItemStyle = styled.div`
     }
     a{
         width:60%;
+        font-size: 1.3rem;
+        background-color: #D71313;
+        padding: 0.5em 1.5rem;
+        border-radius: 8px;
+        border: 2px solid var(--bg-secondary);
+        display: inline-block;
+        color: white;
     }
     @media only screen and (max-width: 768px) {
         .card{
@@ -55,6 +62,9 @@ const ProjectItemStyle = styled.div`
         }
         .project-desc{
         font-size: 1rem;
+        }
+        a{
+            font-size: 1.1rem;
         }
     }
 `
@@ -76,7 +86,8 @@ export default function ProjectItem({
             <p className='project-desc'>
                 {desc}
             </p>
-            <Button></Button>         
+            {/* <Button btnLink='https://diabetic-regular-calculator.vercel.app/'></Button>    */}
+            <a href='https://diabetic-regular-calculator.vercel.app/' rel="noreferrer" target="_blank">Click me</a>      
         </div>  
               
     </div>

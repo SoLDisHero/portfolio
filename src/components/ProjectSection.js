@@ -32,8 +32,9 @@ export default function ProjectSection() {
                 {projects.map((project, index) => {                  
                      return (                      
                       <ProjectItem title={project.name} img={project.img} desc={project.desc} key={index}/>
-                      )
+                      )                      
                 })}
+                
             </div>
         </div>
     </ProjectStyle>
