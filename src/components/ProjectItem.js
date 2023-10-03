@@ -19,7 +19,7 @@ const ProjectItemStyle = styled.div`
     }
     .project-img{
         width: 100%;
-        height:350px;
+        height: 350px;
         overflow: hidden;
         border-radius: 8px;
         display: inline-block;
@@ -35,7 +35,7 @@ const ProjectItemStyle = styled.div`
         color: var(--color);
     }
     .project-desc{
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-family:'Schibsted Grotesk', sans-serif;
         margin-top: 1rem;
         color: var(--color);
@@ -72,6 +72,7 @@ export default function ProjectItem({
     img = ProjectImg,
     title = "Project Name",
     desc = "Some description",
+    link = "https://diabetic-regular-calculator.vercel.app/"
 }) {
   return (
     <ProjectItemStyle>
@@ -87,7 +88,7 @@ export default function ProjectItem({
                 {desc}
             </p>
             {/* <Button btnLink='https://diabetic-regular-calculator.vercel.app/'></Button>    */}
-            <a href='https://diabetic-regular-calculator.vercel.app/' rel="noreferrer" target="_blank">Click me</a>      
+            <a href={link} rel="noreferrer" target="_blank">Click me</a>      
         </div>  
               
     </div>

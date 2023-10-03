@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Text from "../components/Text"
 import AboutImg from "../images/about_bw.jpg"
 import { styled } from 'styled-components'
@@ -14,12 +14,12 @@ const AboutPageStyle = styled.div`
   }
   a{
     font-size: 1.3rem;
-        background-color:#D71313;
-        padding: 0.5em 1.5rem;
-        border-radius: 8px;
-        border: 2px solid var(--bg-secondary);
-        display: inline-block;
-        color: white;
+    background-color:#D71313;
+    padding: 0.5em 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--bg-secondary);
+    display: inline-block;
+    color: white;
   }
   .left{
     flex:4;
@@ -62,6 +62,17 @@ const AboutPageStyle = styled.div`
     text-transform: uppercase;
     margin-top: 5rem;
   }
+  .cv-button{
+    font-size: 0.8rem;
+    background-color:#D71313;
+    padding: 1em 0.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--bg-secondary);
+    display: inline-block;
+    color: white;
+    transition: all 1s ease;
+    position:absolute;
+  }
   @media only screen and (max-width: 768px) {
     padding: 12rem 0 1rem 0;
     .top{
@@ -84,6 +95,12 @@ const AboutPageStyle = styled.div`
 `
 
 export default function About() {
+  const [isDisabled, setDisabled] = useState(false);
+  const handleClick = (e) => {
+    e.preventDefault();
+    setDisabled(true);
+    console.log(isDisabled)
+  }
   return (
     <AboutPageStyle>
       <div className='container'>
@@ -97,23 +114,24 @@ export default function About() {
               <Text>
                 I am from Gomel, Belarus. It is a beautiful country in the middle
                 of Europe.
-                Since my childhood, I love computers. I always wanted to be a part
-                of IT community. At first, I tried to mend and fixed broken parts
-                of the computers. That's when my journey has begun to IT.
+                Since my childhood, I love computers. I always wanted to be part of the tech world. 
+                At first, I tried to mend and fixed broken parts
+                of the computers, which marked the start of my IT journey.
                 <br/>
                 <br/>
-                I always wanted to relate my life with computers. Web design and web development are
-                the answer. I started coding, learning, exploring, and 
-                most important is challenging myself. I find it really intersting and 
-                I enjoy the process. But I still evolving and learning.
+                I always wanted to work with computers, and I found my path in web development.
+                I started coding, learning, exploring, and challenging myself.
+                It's fascinating, and I enjoy every step of it. I'm still growing and learning.
                 <br/>
                 <br/>
-                Also, I love gym, travelling, flying with drone and trying something
-                new.
+                I also have a passion for the gym, travel, flying drones, and trying new things.
               </Text>
-            </div>
+            </div>            
             
-            <a href='EY resume.pdf' download="Eugene_Yerashenka_CV.pdf">Download CV</a>
+            <a href='EY resume.pdf' download="Eugene_Yerashenka_CV.pdf" onClick={handleClick}>Download CV</a>
+
+            <p className={isDisabled === true ? "cv-button" : ""}>{isDisabled === true ? "Feel free to contact me for CV" : ""}</p>
+
           </div>
           <div className='right'>
             <img src={AboutImg} alt='my-pic'></img>

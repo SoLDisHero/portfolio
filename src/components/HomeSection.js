@@ -135,10 +135,10 @@ const HomeStyle = styled.div`
         border-radius:50%;
     }
     .cloudOfRain.four{
-        top:70%;
-        width:180px;
-        height:40px;
-        animation-duration: 118s;    
+        top:68%;
+        width:140px;
+        height:35px;
+        animation-duration: 18s;    
         z-index:-1;    
     }
     .cloudOfRain.five{
@@ -208,12 +208,12 @@ const HomeStyle = styled.div`
     }
     @media only screen and (max-width: 768px) {
         .home{
-            min-height: 750px;
-            top: 10rem;
+            min-height: 550px;
+            top: 5rem;  
         }
         .home_heading{
             font-size: 1.3rem;
-            margin-bottom: -8rem;            
+            margin-bottom: -8rem;     
             .home_name{
                 font-size: 3rem;
             }
@@ -222,7 +222,7 @@ const HomeStyle = styled.div`
             }
         }
         .home_img{
-            height: 300px;
+            height: 350px;
         }
         .home_info{
             margin-top: -6rem;
@@ -231,7 +231,7 @@ const HomeStyle = styled.div`
         width:20px;
         height:20px;
     }
-    }
+}
 `
 
 export default function HomeSection() {
@@ -269,11 +269,10 @@ export default function HomeSection() {
             {boxes.map((x,i) => (
                 <div key={i} className='box'></div>
             ))}
-                {/* <img src={MyPhoto} alt="my-photo" /> */}
             </div>
             <div className='cloud one'></div>
-            <div className='cloud two'></div>
-            <div className='cloud three'></div>
+            {/* <div className='cloud two'></div>
+            <div className='cloud three'></div> */}
             <div className='cloudOfRain rain-cloud four'>
                 <span style={{"--i":12}}></span>
                 <span style={{"--i":10}}></span>
@@ -294,7 +293,7 @@ export default function HomeSection() {
                 <span style={{"--i":13}}></span>
                 <span style={{"--i":15}}></span>
             </div>
-            <div className='cloudOfRain rain-cloud five'>
+            {/* <div className='cloudOfRain rain-cloud five'>
                 <span style={{"--i":12}}></span>
                 <span style={{"--i":10}}></span>
                 <span style={{"--i":11}}></span>
@@ -313,12 +312,7 @@ export default function HomeSection() {
                 <span style={{"--i":17}}></span>
                 <span style={{"--i":13}}></span>
                 <span style={{"--i":15}}></span>
-            </div>
-            {/* <div className='rain five'></div> */}
-            {/* <div className='home_info'> */}
-                {/* <Text>I am highly motivated in web development. I'm a lifelong learner.</Text> */}
-                {/* <Button btnText={"About Me"} btnLink={"/about"} booleanindex={false}/> */}
-            {/* </div> */}
+            </div> */}
         </div>   
     </div> 
     </HomeStyle>

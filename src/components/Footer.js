@@ -2,9 +2,9 @@ import React from 'react'
 import Text from "../components/Text";
 import FooterCol from './FooterCol';
 import { styled } from 'styled-components';
-import {FaFacebook} from "react-icons/fa"
 import {BsGithub} from "react-icons/bs"
 import {HiOutlineMailOpen} from "react-icons/hi"
+import {BsTelegram} from "react-icons/bs"
 
 const FooterStyle = styled.div`
     background-color: #363636;
@@ -28,7 +28,9 @@ const FooterStyle = styled.div`
         color:#D71313;
     }
     .icon li:nth-child(2) svg:hover{
-        color:#4267B2;
+        background-color:white;
+        color: #0088CC;
+        border-radius: 50%;
     }
     ${'' /* .icon li:nth-child(3) svg:hover{
         background: #f09433; 
@@ -66,8 +68,7 @@ export default function Footer() {
                     heading='' 
                     Links={[
                     {icon: <HiOutlineMailOpen/> , type: "link", title : "Email", path:"mailto:geniaer@gmail.com"},
-                    {icon: <FaFacebook/>, type: "link", title : "Facebook", path:"https://www.facebook.com/EugeneYer/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"},
-                    // {icon:<FaInstagramSquare/>, type: "link", title : "Instagram", path:"https://www.instagram.com/soldishero/"},
+                    {icon: <BsTelegram/>, type: "link", title : "Telegram", path:"https://t.me/SoLDisHero"},
                     {icon:<BsGithub/>, type: "link", title : "GitHub", path:"https://github.com/SoLDisHero"},
                     ]}
                 />

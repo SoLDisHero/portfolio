@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from "./Heading"
 import { styled } from 'styled-components'
 import ContactInfoItem from './ContactInfoItem'
-import { MdEmail, MdOutlineLocationOn, MdPhone } from 'react-icons/md'
+import { MdEmail, MdOutlineLocationOn } from 'react-icons/md'
 import ContactForm from './ContactForm'
 
 const ContactStyle = styled.div`
@@ -55,7 +55,6 @@ export default function ContactPage() {
             <Heading title='with me' subTitle='get in touch'/>
             <div className='contact'>
                 <div className='left'>
-                    <ContactInfoItem icon={<MdPhone/>} text='+1 763 843 40 97'/>
                     <ContactInfoItem icon={<MdEmail/>} text='geniaer@gmail.com'/>
                     <ContactInfoItem icon={<MdOutlineLocationOn/>} text='MN, USA'/>
                 </div>
