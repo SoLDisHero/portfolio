@@ -79,7 +79,6 @@ const NavbarStyle = styled.div`
                 color: var(--color);
                 font-size: 1.2rem;
                 font-family:'Schibsted Grotesk', sans-serif; 
-                width:100%;
                 }
             }
         }
