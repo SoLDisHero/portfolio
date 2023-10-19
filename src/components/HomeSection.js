@@ -138,7 +138,7 @@ const HomeStyle = styled.div`
         top:68%;
         width:140px;
         height:35px;
-        animation-duration: 18s;    
+        animation-duration: 48s;    
         z-index:-1;    
     }
     .cloudOfRain.five{
@@ -221,6 +221,13 @@ const HomeStyle = styled.div`
                 letter-spacing:4px;
             }
         }
+        .cloudOfRain.four{
+        top:70%;
+        width:80px;
+        height:25px;
+        animation-duration: 48s;    
+        z-index:-1;    
+    }
         .home_img{
             height: 350px;
         }
@@ -270,7 +277,7 @@ export default function HomeSection() {
                 <div key={i} className='box'></div>
             ))}
             </div>
-            <div className='cloud one'></div>
+            {/* <div className='cloud one'></div> */}
             {/* <div className='cloud two'></div>
             <div className='cloud three'></div> */}
             <div className='cloudOfRain rain-cloud four'>

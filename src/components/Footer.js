@@ -4,7 +4,7 @@ import FooterCol from './FooterCol';
 import { styled } from 'styled-components';
 import {BsGithub} from "react-icons/bs"
 import {HiOutlineMailOpen} from "react-icons/hi"
-import {BsTelegram} from "react-icons/bs"
+import {BiLogoLinkedinSquare} from "react-icons/bi"
 
 const FooterStyle = styled.div`
     background-color: #363636;
@@ -28,9 +28,7 @@ const FooterStyle = styled.div`
         color:#D71313;
     }
     .icon li:nth-child(2) svg:hover{
-        background-color:white;
-        color: #0088CC;
-        border-radius: 50%;
+        color: #0077b5;
     }
     ${'' /* .icon li:nth-child(3) svg:hover{
         background: #f09433; 
@@ -68,7 +66,7 @@ export default function Footer() {
                     heading='' 
                     Links={[
                     {icon: <HiOutlineMailOpen/> , type: "link", title : "Email", path:"mailto:geniaer@gmail.com"},
-                    {icon: <BsTelegram/>, type: "link", title : "Telegram", path:"https://t.me/SoLDisHero"},
+                    {icon: <BiLogoLinkedinSquare/>, type: "link", title : "LinkedIn", path:"https:linkedin.com/in/eugene-yerashenka-85a7118b"},
                     {icon:<BsGithub/>, type: "link", title : "GitHub", path:"https://github.com/SoLDisHero"},
                     ]}
                 />
