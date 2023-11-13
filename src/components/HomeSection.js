@@ -280,7 +280,7 @@ export default function HomeSection() {
             {/* <div className='cloud one'></div> */}
             {/* <div className='cloud two'></div>
             <div className='cloud three'></div> */}
-            <div className='cloudOfRain rain-cloud four'>
+            {/* <div className='cloudOfRain rain-cloud four'>
                 <span style={{"--i":12}}></span>
                 <span style={{"--i":10}}></span>
                 <span style={{"--i":11}}></span>
@@ -299,7 +299,7 @@ export default function HomeSection() {
                 <span style={{"--i":17}}></span>
                 <span style={{"--i":13}}></span>
                 <span style={{"--i":15}}></span>
-            </div>
+            </div> */}
             {/* <div className='cloudOfRain rain-cloud five'>
                 <span style={{"--i":12}}></span>
                 <span style={{"--i":10}}></span>
