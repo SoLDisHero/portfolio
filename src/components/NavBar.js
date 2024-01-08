@@ -45,21 +45,6 @@ const NavbarStyle = styled.div`
         a:hover::before{
             transform:scaleX(1)
         }
-
-        
-        ${'' /* .selected{
-            animation: move 0.3s ease;
-        }
-        @keyframes move {
-            0% {
-                transform: translateY(-5rem);
-            }
-            100% {
-                transform: translateY(0.1rem);
-                
-                animation-play-state: paused;
-            }
-        } */}
     }
     @media only screen and (max-width: 768px){
         position: fixed;
@@ -92,7 +77,22 @@ const NavbarStyle = styled.div`
             }
         }
     }
-    
+    @media (max-width: 768px) and (pointer: fine) {
+    /* iOS Safari */
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: env(safe-area-inset-top);
+    }
+    }
+    @media (min-width: 769px) and (pointer: fine) {
+    /* iOS Safari */
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: env(safe-area-inset-top);
+    }
+    }
 `
 
 export default function Navbar() {

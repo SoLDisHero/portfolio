@@ -81,9 +81,9 @@ export default function ContactForm() {
 
     const handleClick = (e) => {
         if(name === "" && email === "" && message === ""){
-            setSend(false);
-        }else{
             setSend(true);
+        }else{
+            setSend(false);
         }
     }
     useEffect(() => {
