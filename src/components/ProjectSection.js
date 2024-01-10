@@ -9,7 +9,7 @@ const ProjectStyle = styled.div`
   .projects-items{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap:4rem;
+    gap:3rem;
     margin-top:3rem;
     text-align: center;
   }

@@ -5,13 +5,20 @@ import { styled } from 'styled-components'
 
 const ProjectItemStyle = styled.div`        
     .card{
-        box-shadow: 0px 0px 25px -5px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
         transition: 0.3s;
-        animation: ease-in-out;
-        border-radius:6px;
+        animation: all 5s ease-in-out;
+        border-radius:10px;
         background-color: var(--bg-secondary);
-        height: 580px;
+        height: 100%;
+        position: relative;
     }
+    /* width: 100%;
+      max-width: 250px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
     .card:hover{
         transform:scale(1.1);
         box-shadow: 0px 0px 10px 0px;
@@ -29,6 +36,7 @@ const ProjectItemStyle = styled.div`
         background-color: var(--bg-secondary);
         padding: 1rem;
         border-radius: 6px;
+        margin-bottom: 5rem;
     }
     .project-title{
         font-size: 2rem;
@@ -42,17 +50,21 @@ const ProjectItemStyle = styled.div`
     }
     a{
         width:60%;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         background-color: #D71313;
-        padding: 0.5em 1.5rem;
-        border-radius: 8px;
-        border: 2px solid var(--bg-secondary);
+        padding: 0.7em 1.5rem;
+        border-radius: 10px;
+        border: 1px solid var(--bg-secondary);
         display: inline-block;
         color: white;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     @media only screen and (max-width: 768px) {
         .card{
-        height: 500px;
+        height: 100%;
         }
         .project-img{
             height: 300px;
