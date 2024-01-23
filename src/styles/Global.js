@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-
+import 'animate.css';
 const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;

@@ -3,6 +3,7 @@ import Text from "../components/Text"
 import AboutImg from "../images/about_bw.jpg"
 import { styled } from 'styled-components'
 import AboutInfoItem from '../components/AboutInfoItem'
+import LettersAnimated from '../components/LettersAnimated'
 
 const AboutPageStyle = styled.div`
   padding: 10rem 0 7rem 0;
@@ -21,21 +22,120 @@ const AboutPageStyle = styled.div`
     display: inline-block;
     color: white;
   }
-  .left{
-    flex:4;
+    .left{
+      flex:4;
+      .about-subheading{
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      span{
+        padding: 0.3rem;
+        padding-left: 0;
+      }
+    }
+    .text-animate{
+            opacity: 0;
+            animation: bounceIn 1s 1s;
+            animation-fill-mode: forwards;
+            min-width: 10px;
+        }
+        .text-animate._1 {
+        animation-delay: 0.1s;
+        }
+        .text-animate._2 {
+        animation-delay: 0.2s;
+        }
+        .text-animate._3 {
+        animation-delay: 0.3s;
+        }
+        .text-animate._4 {
+        animation-delay: 0.4s;
+        }
+        .text-animate._5 {
+        animation-delay: 0.5s;
+        }
+        .text-animate._6 {
+        animation-delay: 0.6s;
+        }
+        .text-animate._7 {
+        animation-delay: 0.7s;
+        }
+        .text-animate._8 {
+        animation-delay: 0.8s;
+        }
+        .text-animate._9 {
+        animation-delay: 0.9s;
+        }
+        .text-animate._10 {
+        animation-delay: 1s;
+        }
+        .text-animate._11 {
+        animation-delay: 1.1s;
+        }
+        .text-animate._12 {
+        animation-delay: 1.2s;
+        }
+        .text-animate._13 {
+        animation-delay: 1.3s;
+        }
+        .text-animate._14 {
+        animation-delay: 1.4s;
+        }
+        .text-animate._15 {
+        animation-delay: 1.5s;
+        }
+        .text-animate._16 {
+        animation-delay: 1.4s;
+        }
+        .text-animate._17 {
+        animation-delay: 1.5s;
+        }
+        .text-animate._18 {
+        animation-delay: 1.4s;
+        }
+        .text-animate._19 {
+        animation-delay: 1.3s;
+        }
+        .text-animate._20 {
+        animation-delay: 1.2s;
+        }
+        .text-animate._21 {
+        animation-delay: 1.1s;
+        }
+        .text-animate._22 {
+        animation-delay: 1s;
+        }
+        .text-animate._23 {
+        animation-delay: .9s;
+        }
+        .text-animate._24 {
+        animation-delay: .8s;
+        }
+        .text-animate._25 {
+        animation-delay: .7s;
+        }
+        .text-animate._26 {
+        animation-delay: 0.6s;
+        }
+        .text-animate._27 {
+        animation-delay: 0.5s;
+        }
+        .text-animate._28 {
+        animation-delay: 0.4s;
+        }
+        .text-animate._29 {
+        animation-delay: 0.3s;
+        }
+        .text-animate._30 {
+        animation-delay: 0.2s;
+        }
+        .text-animate._31 {
+        animation-delay: 0.1s;
+        }
   }
   .right{
     flex:2;
   }
-  .about-subheading{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    span{
-      background-color: var(--bg-secondary);
-      padding: 0.3rem;
-      border-radius: 10px;
-    }
-  }
+  
   .about-heading{
     font-size: 2.8rem;
     margin-bottom: 1.3rem;
@@ -101,15 +201,24 @@ export default function About() {
     setDisabled(true);
     console.log(isDisabled)
   }
+  const upLetters = ["H", "i", ",", " ", "I", "'", "m", " ", "E", "u", "g", "e", "n", "e", " "]
+  const downLetters = ["a", " ", "W", "e", "b", " ", "D", "e", "v", "e", "l", "o", "p", "e", "r", "."]
   return (
     <AboutPageStyle>
       <div className='container'>
         <div className='top'>
           <div className='left'>
-            <p className='about-subheading'>
+          <div className='about-subheading'>
+          <LettersAnimated letterClass={"text-animate"} letters={upLetters} idx={1}/>
+            {/* <p className='about-subheading'>
               Hi, I'm <span>Eugene</span>
-            </p>
-            <h2 className='about-heading'>a Web Developer.</h2>
+            </p> */}
+            {/* <h2 className='about-heading'>a Web Developer.</h2> */}
+            <h2 className='about-heading'>
+            <LettersAnimated letterClass={"text-animate"} letters={downLetters} idx={16}/>
+            </h2>
+          </div>
+            
             <div className='about-info'>
               <Text>
                 I am from Gomel, Belarus. It is a beautiful country in the middle

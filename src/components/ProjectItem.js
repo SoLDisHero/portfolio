@@ -13,12 +13,6 @@ const ProjectItemStyle = styled.div`
         height: 100%;
         position: relative;
     }
-    /* width: 100%;
-      max-width: 250px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
     .card:hover{
         transform:scale(1.1);
         box-shadow: 0px 0px 10px 0px;

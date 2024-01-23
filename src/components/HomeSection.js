@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import MyPhoto from "../images/me_bw.jpg"
 // import Text from './Text'
 import { styled } from 'styled-components'
+import LettersAnimated from './LettersAnimated';
 
 const HomeStyle = styled.div`
     overflow:hidden;
@@ -30,8 +31,68 @@ const HomeStyle = styled.div`
         position:relative;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         color: #363636;
-        span{
-            width:100%;
+        .text-animate{
+            opacity: 0;
+            animation: bounceIn 1s 1s;
+            animation-fill-mode: forwards;
+            min-width: 10px;
+        }
+        .text-animate._1 {
+        animation-delay: 0.1s;
+        }
+        .text-animate._2 {
+        animation-delay: 0.2s;
+        }
+        .text-animate._3 {
+        animation-delay: 0.3s;
+        }
+        .text-animate._4 {
+        animation-delay: 0.4s;
+        }
+        .text-animate._5 {
+        animation-delay: 0.5s;
+        }
+        .text-animate._6 {
+        animation-delay: 0.6s;
+        }
+        .text-animate._7 {
+        animation-delay: 0.7s;
+        }
+        .text-animate._8 {
+        animation-delay: 0.8s;
+        }
+        .text-animate._9 {
+        animation-delay: 0.9s;
+        }
+        .text-animate._10 {
+        animation-delay: 1s;
+        }
+        .text-animate._11 {
+        animation-delay: 1.1s;
+        }
+        .text-animate._12 {
+        animation-delay: 1.2s;
+        }
+        .text-animate._13 {
+        animation-delay: 1.3s;
+        }
+        .text-animate._14 {
+        animation-delay: 1.4s;
+        }
+        .text-animate._15 {
+        animation-delay: 1.5s;
+        }
+        .text-animate._16 {
+        animation-delay: 1.6s;
+        }
+        .text-animate._17 {
+        animation-delay: 1.7s;
+        }
+        .text-animate._18 {
+        animation-delay: 1.8s;
+        }
+        .text-animate._19 {
+        animation-delay: 1.9s;
         }
         .home_name{
             display: inline;
@@ -243,6 +304,9 @@ const HomeStyle = styled.div`
 
 export default function HomeSection() {
   const [boxes, setBoxes] = useState([]);
+  const letterArrayUp = ["H", "e", "l", "l", "o", ",", " ", "I", " ", "a", "m", " "]; 
+  const letterArrayDown = ["E", "u", "g", "e", "n", "e", "."]; 
+
   useEffect(() => {
     setBoxes(Array.from({length: 150}, (x,i) => i))
   },[]);
@@ -263,13 +327,8 @@ export default function HomeSection() {
         <div className='container section'>
             <div className='left'>
                 <h1 className='home_heading'>
-                    <span className='home_name first'>Hello, I am </span>
-                    <span className='home_name z'>E</span>
-                    <span className='home_name'>u</span>
-                    <span className='home_name z'>g</span>
-                    <span className='home_name'>e</span>
-                    <span className='home_name z'>n</span>
-                    <span className='home_name'>e</span>
+                    <LettersAnimated letterClass={"home_name text-animate"} letters={letterArrayUp} idx={1}/>
+                    <LettersAnimated letterClass={"home_name text-animate"} letters={letterArrayDown} idx={13}/>
                 </h1>
             </div>                        
             <div className='home_img'>
