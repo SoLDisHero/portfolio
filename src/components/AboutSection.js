@@ -470,7 +470,7 @@ const AboutSectionStyle = styled.div`
         .button_section{
             flex-direction: column;
                 .button-wrapper, a{
-                width:60%;
+                width:90%;
             }
         }
         
