@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import MyPhoto from "../images/me_bw.jpg"
-// import Text from './Text'
 import { styled } from 'styled-components'
 import LettersAnimated from './LettersAnimated';
 
@@ -96,7 +94,7 @@ const HomeStyle = styled.div`
         }
         .home_name{
             display: inline;
-            font-size: 5rem;
+            font-size: 3rem;
             font-family:'Nunito', sans-serif;    
                   
         }

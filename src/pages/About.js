@@ -21,6 +21,9 @@ const AboutPageStyle = styled.div`
     border: 2px solid var(--bg-secondary);
     display: inline-block;
     color: white;
+    opacity: 0;
+    animation: backInLeft 1.5s 1s;
+    animation-fill-mode: forwards;
   }
     .left{
       flex:4;
@@ -134,13 +137,15 @@ const AboutPageStyle = styled.div`
   }
   .right{
     flex:2;
-  }
-  
+  }  
   .about-heading{
     font-size: 2.8rem;
     margin-bottom: 1.3rem;
   }
-  .about-info{
+  .about-info{    
+    opacity: 0;
+    animation: fadeIn 3s 0.1s;
+    animation-fill-mode: forwards;
     margin-bottom: 2rem;
     .textC{
       max-width:100%;
@@ -210,10 +215,6 @@ export default function About() {
           <div className='left'>
           <div className='about-subheading'>
           <LettersAnimated letterClass={"text-animate"} letters={upLetters} idx={1}/>
-            {/* <p className='about-subheading'>
-              Hi, I'm <span>Eugene</span>
-            </p> */}
-            {/* <h2 className='about-heading'>a Web Developer.</h2> */}
             <h2 className='about-heading'>
             <LettersAnimated letterClass={"text-animate"} letters={downLetters} idx={16}/>
             </h2>

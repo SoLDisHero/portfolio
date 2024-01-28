@@ -1,21 +1,25 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { styled } from 'styled-components';
 import emailjs from '@emailjs/browser';
+
 const FormStyle = styled.div`
     width: 100%;
     .form-group{
         width:100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.3rem;
+        opacity: 0;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
     }
     input, textarea{
         width: 100%;
-        font-size: 1.5rem;
-        padding: 1rem;
+        font-size: 1.1rem;
+        padding: .9rem;
         color: white;
         background-color: var(--bg-secondary);
         outline: none;
-        border: none;
-        border-radius: 10px;
+        border-radius: 3px;
+        border: 1px solid var(--color);
         font-family: 'Schibsted Grotesk', sans-serif;
     }
     textarea{
@@ -25,13 +29,17 @@ const FormStyle = styled.div`
     button[type="submit"]{
         background-color: #D71313;
         color: white;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         display: inline-block;
         outline:none;
         border:none;
-        padding: 0.5em 2rem;
-        border-radius: 8px;
+        padding: 0.6em 2rem;
+        border-radius: 3px;
         cursor: pointer;
+        letter-spacing: 6px;
+        opacity: 0;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
     }
     .send-button{
     font-size: 1rem;
@@ -81,9 +89,9 @@ export default function ContactForm() {
 
     const handleClick = (e) => {
         if(name === "" && email === "" && message === ""){
-            setSend(true);
-        }else{
             setSend(false);
+        }else{
+            setSend(true);
         }
     }
     useEffect(() => {
@@ -101,7 +109,7 @@ export default function ContactForm() {
             <div className='form-group'>
                 <input 
                 required
-                placeholder="Your name"
+                placeholder="Name"
                 type='text' 
                 id='name' 
                 name='name' 
@@ -111,7 +119,7 @@ export default function ContactForm() {
             <div className='form-group'>                
                 <input 
                 required
-                placeholder="Your email"
+                placeholder="Email"
                 type='email' 
                 id='email' 
                 name='email' 
@@ -121,15 +129,15 @@ export default function ContactForm() {
             <div className='form-group'>
                 <textarea 
                 required
-                placeholder="Your message"
+                placeholder="Message"
                 type='text' 
                 id='message' 
                 name='message' 
                 value={message} 
                 onChange={e => setMessage(e.target.value)}></textarea>
             </div>
-            <button type='submit' onClick={handleClick}>Send</button>
-            </form>
+            <button type='submit' onClick={handleClick}>SUBMIT</button>
+        </form>
             <p className={isSend === true ? "send-button" : ""}>{isSend === true ? "Your message has been sent" : ""}</p>
         </FormStyle>
     </div>
