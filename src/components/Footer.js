@@ -59,7 +59,7 @@ export default function Footer() {
                     heading='' 
                     Links={[
                     {icon: <HiOutlineMailOpen/> , type: "link", title : "Email", path:"mailto:geniaer@gmail.com"},
-                    {icon: <BiLogoLinkedinSquare/>, type: "link", title : "LinkedIn", path:"https:linkedin.com/in/eugene-yerashenka-85a7118b"},
+                    {icon: <BiLogoLinkedinSquare/>, type: "link", title : "LinkedIn", path:"https://www.linkedin.com/in/eugene-yerashenka-85a7118b/"},
                     {icon:<BsGithub/>, type: "link", title : "GitHub", path:"https://github.com/SoLDisHero"},
                     ]}
                 />

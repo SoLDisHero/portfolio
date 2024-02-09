@@ -163,7 +163,7 @@ const AboutPageStyle = styled.div`
     margin-bottom: 1rem;
   }
   .bottom-heading{
-    font-size: 2rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
     margin-top: 5rem;
   }
@@ -271,11 +271,11 @@ export default function About() {
             </h2>
             <AboutInfoItem 
             title='FrontEnd' 
-            items={["HTML", "CSS", "JavaSript", "REACT", "Bootstrap", "Others"]}>              
+            items={["HTML", "CSS", "SASS", "JavaSript", "React", "Bootstrap", "WordPress"]}>              
             </AboutInfoItem>
             <AboutInfoItem 
             title='BackEnd' 
-            items={["Node", "Express", "Mongo DB", "Mongoose", "Others"]}>              
+            items={["Node", "Express", "MongoDB", "Mongoose"]}>              
             </AboutInfoItem>
           </div>
         </div>
