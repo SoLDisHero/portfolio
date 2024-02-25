@@ -102,9 +102,10 @@ export default function Navbar() {
     const [visible, setVisible] = useState(true);
 
     function handleScroll() {
-        const currentScroll = window.scrollY;        
-        setVisible(prevScroll > currentScroll && currentScroll === 0);
-        setPrevScroll(currentScroll);
+        const currentScroll = window.scrollY;  
+        const currentScrollSafari = document.documentElement.scrollTop;      
+        setVisible(prevScroll > currentScroll && prevScroll > currentScrollSafari && currentScroll === 0 && currentScrollSafari === 0);
+        setPrevScroll(currentScroll || currentScrollSafari);
     }
 
     useEffect(() => {
