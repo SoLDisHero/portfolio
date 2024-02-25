@@ -92,7 +92,7 @@ function debounce(func, delay) {
   
     const handleScroll = debounce(() => {
       const currentScroll = window.scrollY;
-      setVisible(prevScroll > currentScroll && currentScroll < 77);
+      setVisible(prevScroll > currentScroll && currentScroll === 0);
       setPrevScroll(currentScroll);
     }, 100);
   
