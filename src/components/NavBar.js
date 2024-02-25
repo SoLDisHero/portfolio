@@ -77,59 +77,45 @@ const NavbarStyle = styled.div`
             }
         }
     }
-    @media (max-width: 768px) and (pointer: fine) {
-    /* iOS Safari */
-    .navbar {
-        position: fixed;
-        width: 100%;
-        top: env(safe-area-inset-top);
-    }
-    }
-    @media (min-width: 769px) and (pointer: fine) {
-    /* iOS Safari */
-    .navbar {
-        position: fixed;
-        width: 100%;
-        top: env(safe-area-inset-top);
-    }
-    }
 `
-
-export default function Navbar() {
-    
-    //hide navbar
+function debounce(func, delay) {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+  
+  export default function Navbar() {
     const [prevScroll, setPrevScroll] = useState(0);
     const [visible, setVisible] = useState(true);
-
-    function handleScroll() {
-        const currentScroll = window.scrollY;  
-        const currentScrollSafari = document.documentElement.scrollTop;      
-        setVisible(prevScroll > currentScroll && prevScroll > currentScrollSafari && currentScroll === 0 && currentScrollSafari === 0);
-        setPrevScroll(currentScroll || currentScrollSafari);
-    }
-
+  
+    const handleScroll = debounce(() => {
+      const currentScroll = window.scrollY;
+      setVisible(prevScroll > currentScroll && currentScroll < 77);
+      setPrevScroll(currentScroll);
+    }, 100);
+  
     useEffect(() => {
-        
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    },)
-
-
-  return (
-    <NavbarStyle className={visible ? "navbar" : "navbar hiddenNav"}>
-    <ul >
-        <li>
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, [handleScroll]);
+  
+    return (
+      <NavbarStyle className={visible ? 'navbar' : 'navbar hiddenNav'}>
+        <ul>
+          <li>
             <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
+          </li>
+          <li>
             <NavLink to="/about">About</NavLink>
-        </li>
-        <li>
+          </li>
+          <li>
             <NavLink to="/contact">Contact</NavLink>
-        </li>        
-    </ul>
-    </NavbarStyle>
-  )
-}
+          </li>
+        </ul>
+      </NavbarStyle>
+    );
+  }
