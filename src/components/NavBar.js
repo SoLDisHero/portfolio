@@ -94,7 +94,7 @@ function debounce(func, delay) {
       const currentScroll = window.scrollY;
       setVisible(prevScroll > currentScroll && currentScroll < 100);
       setPrevScroll(currentScroll);
-    }, 10);
+    }, 100);
   
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
