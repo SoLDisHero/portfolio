@@ -78,30 +78,29 @@ const NavbarStyle = styled.div`
         }
     }
 `
-function debounce(func, delay) {
-    let timer;
-    return function (...args) {
-      clearTimeout(timer);
-      timer = setTimeout(() => func.apply(this, args), delay);
-    };
-  }
-  
-  export default function Navbar() {
+export default function Navbar() {
     const [prevScroll, setPrevScroll] = useState(0);
     const [visible, setVisible] = useState(true);
   
-    const handleScroll = debounce(() => {
-      const currentScroll = window.scrollY;
-      setVisible(prevScroll > currentScroll && currentScroll < 100);
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
+      setVisible(prevScroll > currentScroll || currentScroll === 0);
       setPrevScroll(currentScroll);
-    }, 100);
+    };
   
     useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
+      let rafId;
+      const handleScrollAnimationFrame = () => {
+        handleScroll();
+        rafId = window.requestAnimationFrame(handleScrollAnimationFrame);
       };
-    }, [handleScroll]);
+      
+      handleScrollAnimationFrame();
+  
+      return () => {
+        window.cancelAnimationFrame(rafId);
+      };
+    }, []);
   
     return (
       <NavbarStyle className={visible ? 'navbar' : 'navbar hiddenNav'}>
