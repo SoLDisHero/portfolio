@@ -100,7 +100,7 @@ export default function Navbar() {
       return () => {
         window.cancelAnimationFrame(rafId);
       };
-    }, []);
+    },);
   
     return (
       <NavbarStyle className={visible ? 'navbar' : 'navbar hiddenNav'}>
